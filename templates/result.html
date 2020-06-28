@@ -1,0 +1,61 @@
+<html>
+  <head>	
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<!--<link href="main.css" rel="stylesheet">-->
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+<body>
+	<div class="s006">
+		<form action="http://127.0.0.1:5000/" method="post">
+			<input type="text" class="searchTerm" name="searchTerm"  placeholder="What are you looking for?">
+			<input type="submit" value="Submit">
+		</form>
+
+		{% if hits %}
+		<hgroup class="mb20">
+			<h1>Search Results</h1>
+			<h2 class="lead" id="results"><strong class="text-danger">{{ num_results }}</strong> results were found for the search for <strong class="text-danger">{{  query  }}</strong></h2>
+			<h2 class="lead" id="results"> About <strong class="text-danger">({{  time  }}ms)</strong></h2>
+		</hgroup>
+		<h4><span>Tags: </span><ul id="tags" style="display: inline-block"></ul></h4>
+
+		<section id='song_section' class="col-md-8">
+			{% for hit in hits %}
+			<article class="search-result row">
+				<div class="col-md-12">
+					<h3><a href="#" title="">{{ hit._source.title }}</a></h3>
+					<ul class="meta-search">
+						<li><i class="glyphicon glyphicon-tags"></i> <span>Genre: {{ hit._source.வகை  }} </span></li>
+						<li><i class="glyphicon glyphicon-tags"></i> <span>Artist: {{ hit._source.பாடியவர்கள் }}</span></li>
+						 <li><i class="glyphicon glyphicon-tags"></i> <span>Music: {{ hit._source.இசையமைப்பாளர் }}</span></li>
+						<li><i class="glyphicon glyphicon-tags"></i> <span>Lyrics: {{ hit._source.பாடல்வரிகள் }}</span></li>
+						<li><i class="glyphicon glyphicon-tags"></i> <span>Views: {{ hit._source.நுகர்ச்சி }}</span></li>
+					</ul>
+					<p style="white-space: pre-line">{{ hit._source.song_lyrics }}</p>
+				</div>
+				<div class="col-md-6">
+
+				</div>
+				<span class="clearfix borda"></span>
+			</article>
+			{% endfor %}
+		</section>
+		
+
+		{% else %}
+			{% if init %}
+				<hgroup class="mb20">
+				<h1>Song Search Engine</h1>
+				<h2 class="lead">Please enter the search query in the box</strong></h2>
+			</hgroup>
+			{% else %}
+			<hgroup class="mb20">
+				<h1>Search Results</h1>
+				<h2 class="lead"><strong class="text-danger">0</strong> results were found for the search for <strong class="text-danger">{{  query  }}</strong></h2>
+			</hgroup>
+			{% endif %}
+		{% endif %}
+	</div>
+</body>
