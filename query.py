@@ -1,6 +1,14 @@
 import json
 
 
+def standard_analyzer(query):
+    q = {
+        "analyzer": "standard",
+        "text": query
+    }
+    return q
+
+
 def basic_search(query):
     q = {
         "query": {
@@ -16,7 +24,7 @@ def search_with_field(query, field):
     q = {
         "query": {
             "match": {
-                field : query
+                field: query
             }
         }
     }
@@ -97,7 +105,9 @@ def agg_q():
     return q
 
 
-def agg_multi_match_and_sort_q(query, sort_num, fields=['title', 'song_lyrics'], operator='or'):
+def agg_multi_match_and_sort_q(query, fields, operator='or',sort_num=10):
+    print(fields)
+    print(query)
     print('sort num is ', sort_num)
     q = {
         "size": sort_num,
@@ -115,25 +125,25 @@ def agg_multi_match_and_sort_q(query, sort_num, fields=['title', 'song_lyrics'],
         "aggs": {
             "Genre Filter": {
                 "terms": {
-                    "field": "genre.keyword",
+                    "field": "வகை.keyword",
                     "size": 10
                 }
             },
             "Music Filter": {
                 "terms": {
-                    "field": "music.keyword",
+                    "field": "இசையமைப்பாளர்.keyword",
                     "size": 10
                 }
             },
             "Artist Filter": {
                 "terms": {
-                    "field": "artist.keyword",
+                    "field": "பாடியவர்கள்.keyword",
                     "size": 10
                 }
             },
             "Lyrics Filter": {
                 "terms": {
-                    "field": "lyrics.keyword",
+                    "field": "பாடல்வரிகள்.keyword",
                     "size": 10
                 }
             }

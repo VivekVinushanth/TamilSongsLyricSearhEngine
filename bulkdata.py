@@ -6,7 +6,7 @@ import unicodedata
 # import queries
 
 client = Elasticsearch(HOST="http://localhost", PORT=9200)
-INDEX = 'tamilsonglyrics'
+INDEX = 'lyrics'
 
 # Creating index if not manually created
 # def createIndex():
