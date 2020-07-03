@@ -33,7 +33,7 @@ Demo
 SampleQueries
 ---
 * Can search for lyrics if you just know movie/year/singer/lyricist/genre.
- * E.g.- "யுகபாரதி"
+ > E.g.- "யுகபாரதி"
 ```
 {
     "query": {
@@ -56,7 +56,7 @@ SampleQueries
  }
 ```
 * Can search with WildCard when not so sure of spell
- * E.g.- "யுக*" for "யுகபாரதி"
+ > E.g.- "யுக*" for "யுகபாரதி"
  ```{
      "query" : {
           "match" : {
@@ -66,7 +66,7 @@ SampleQueries
  }
  ```
 * Can search when you think one term might show up in multiple fields
- * E.g.- "அனிருத்"
+ > E.g.- "அனிருத்"
 ```
 {
       "query" : {
@@ -78,7 +78,7 @@ SampleQueries
 }
 ```
 * Can search for Top-20 songs of particular nature(Genre/singers/music directors) where Top is marked on "மதிப்பீடு" (rating)
- * E.g. - மிகச்சிறந்த 20 குத்துபாடல்
+ > E.g. - மிகச்சிறந்த 20 குத்துபாடல்
 ```{
    "size":20,
    "sort" : [
@@ -95,7 +95,7 @@ SampleQueries
 ```
 
 * Can search for Famous songs (of music directors/gneres/singers) where 'famous' is marked upon "நுகர்ச்சி" (views)
- * E.g. - பிரபல்யமான 15 ஹரிஷ் ஜெயராஜ் பாடல்கள்
+ > E.g. - பிரபல்யமான 15 ஹரிஷ் ஜெயராஜ் பாடல்கள்
 ```{
    "size":15,
    "sort" : [
@@ -111,7 +111,7 @@ SampleQueries
 }
 ```
 * Can search with query spanning multiplefields
- * E.g.  இமான் 2019 பாடல்வரிகள் 
+ > E.g.- இமான் 2019 பாடல்வரிகள் 
 ```
 {
  "query": {
@@ -126,7 +126,7 @@ SampleQueries
 }
 ```
 * Can seach for latest songs (Range Query) where latest is based on year
- * E.g.- இமான் சமீபத்திய பாடல்கள் 
+ > E.g.- இமான் சமீபத்திய பாடல்கள் 
 ```{
   "query": {
     "bool": {
@@ -148,7 +148,7 @@ SampleQueries
 }
 ```
 * Can search for Latest songs (Filtered query)
- * E.g. - சமீபத்திய பாடல்கள் 
+ > E.g. - சமீபத்திய பாடல்கள் 
 ```
 {
   "query": {
@@ -171,7 +171,7 @@ SampleQueries
 }
 ```
 * Can get only prefered fields searching with other field
-E.g.- Latest குத்துபாடல் திரைப்படம்/இசையமைப்பாளர்
+> E.g.- Latest குத்துபாடல் திரைப்படம்/இசையமைப்பாளர்
  * 
  ```
  {
