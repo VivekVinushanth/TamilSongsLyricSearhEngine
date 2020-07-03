@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "e3007554-cfe4-4bc2-88d7-f3bbb5dc7ff8",
+		"name": "SongLyricSearchEngineSample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ElasticSearchServerUpTest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Type and Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"திரைப்படம்\": \"ஆயிரம் ஜென்மங்கள் \", \r\n\"பாடலாசிரியர்\": \"யுகபாரதி \", \r\n\"இசையமைப்பாளர்\": \"C. சத்யா\", \r\n\"பாடல்\": \"அடடா அவளே என் ஆளு\", \r\n\"வருடம்\": \"2020\", \r\n\"பாடியவர்கள்\": \"Vijay Narain\", \r\n\"பாடல்வரிகள்\": \"ஆண் : அடடா…. அடடா…. அவளே என் ஆளு….. அழகோ…. அழகு….. முழுசா நீ கேளு….  ஆண் : சுத்தவிடும்…. கண்ணால…. என் உச்சந் தலையில அம்மி அரைச்சவ முட்டின முட்டுல முட்டியும் பேந்தேனே  ஆண் : நான் ரெக்க விரிச்சிட நின்னு சிரிச்சவ தட்டின தட்டுல சல்லடையானேனே  ஆண் : தன்னாலே…..ஏ…..ஏ….ஏ….ஏ…. கொன்னாலே……ஏ…..ஏ…..ஏ…..  ஆண் : ஜின்னு அடிக்கவில்லை ரம்மு குடிக்கவில்லை பின்ன எதுக்கு இப்படி மனுசு கெறங்கி போனேன்  ஆண் : முத்தம் குடுக்கவில்லை குத்தம் நடக்கவில்லை பின்ன எதுக்கு இப்படி மனச கொரங்கு ஆனேன்  ஆண் : என் மின்னல கொட்டுற கண்ணுல புள்ளி வெச்சி என்ன வளச்சி நெளுச்சி வண்ணக்கிளி அவ வரைஞ்சா கோலம்  ஆண் : மத்தாளம் தட்டுற மன்மத சங்கதி மொத்தமும் சொல்லவச்சி அந்த மொரட்டு சிறுக்கி ஒத்த நொடியில எடுத்தா ஏலம்  ஆண் : அடடா…. அடடா…. அவளே என் ஆளு….. அழகோ…. அழகு….. முழுசா நீ கேளு….  ஆண் : ஹேய் கால் அழக கண்டுவிட கொஞ்சம் குனிஞ்சேனே கை அழக தட்டிவிட கன்னி கழிஞ்சேனே  ஆண் : வாய் அழக வட்டமிட கண்ணு முழிச்சேனே மார் அழகு மத்தியிலே செத்து பொழைச்சேனே  ஆண் : கொஞ்சம் அவ சிரிச்சா கொழுப்பே ஏறும் தொட்டுவிட துணிஞ்சா பசி தீரும்  ஆண் : ஒட்டி அவ நடந்தா உலகே சேதம் வெக்கத்துல கரைஞ்ச ரசவாதம்  ஆண் : கொலைகாரி நெஞ்சே மல பம்பா வந்து கொத்திவிட வழி ஏதும் இல்லை இருந்தாலும் என்னை கத்த விட்டாயே  ஆண் : ஜின்னு அடிக்கவில்லை ரம்மு குடிக்கவில்லை பின்ன எதுக்கு இப்படி மனசு கெறங்கி போனேன்  ஆண் : முத்தம் குடுக்கவில்லை குத்தம் நடக்கவில்லை பின்ன எதுக்கு இப்படி மனுச கொரங்கு ஆனேன்  ஆண் : என் மின்னல கொட்டுற கண்ணுல புள்ளி வெச்சி என்ன வளச்சி நெளுச்சி வண்ணக்கிளி அவ வரைஞ்சா கோலம்  ஆண் : மத்தாளம் தட்டுற மன்மத சங்கதி மொத்தமும் சொல்லவச்சி அந்த மொரட்டு சிறுக்கி ஒத்த நொடியில எடுத்தா ஏலம்  ஆண் : அடடா…. அடடா…. அவளே என் ஆளு….. அழகோ…. அழகு….. முழுசா நீ கேளு….\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/lyrics/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"lyrics",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BasicSearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpecifiedSearch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"query\" : {\r\n         \"query_string\" : {\r\n            \"query\":\"மெல்லிசை பாடல்\"\r\n         }\r\n     }\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "query ",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpecifiedSearch2-fleld",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"query\" : {\r\n          \"match\" : {\r\n             \"பாடலாசிரியர்\" : \"யுகபாரதி\"\r\n         }\r\n     }\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "query ",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpecifiedSearch-multifileds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"query\" : {\r\n         \"multi_match\" : {\r\n             \"query\" : \"அனிருத்\",\r\n             \"fields\": [\"பாடியவர்கள்\",\"இசையமைப்பாளர்\"]\r\n         }\r\n     }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "query ",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Range Query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": {\r\n        \"range\" : {\r\n            \"வருடம்\" : {\r\n                \"gte\" : 2019,\r\n                \"lte\" : 2021,\r\n                \"boost\" : 2.0\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fuzzy Query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": {\r\n        \"fuzzy\": {\r\n            \"பாடலாசிரியர்\": {\r\n                \"value\": \"மல்லிச\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Andquery",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": {\r\n        \"match\" : {\r\n            \"message\" : {\r\n                \"query\" : \"2019 \",\r\n                \"operator\" : \"and\",\r\n                \"minimum_should_match\" : \"25%\",\r\n                \"fuzziness\": \"AUTO\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/lyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"lyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lyrics search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": {\r\n        \"match\" : {\r\n            \"message\" : {\r\n                \"query\" : \"ஹேய் உச்சி மலை அழகு ஆதாரமா\",\r\n                \"operator\" : \"and\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "பிரபல்யமான 15 ஹரிஷ் ஜெயராஜ் பாடல்கள்",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"size\":15,\r\n   \"sort\" : [\r\n       { \"நுகர்ச்சி\" : {\"order\" : \"desc\"}}\r\n   ],\r\n   \"query\": {\r\n       \"multi_match\": {\r\n           \"fields\":[\"இசையமைப்பாளர்\"],\r\n           \"query\" : \"ஹரிஷ் ஜெயராஜ்\",\r\n           \"fuzziness\": \"AUTO\"\r\n       }\r\n   }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Latest இமான் songs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": {\r\n    \"bool\": {\r\n      \"must\": [{\r\n          \"match\": {\r\n            \"இசையமைப்பாளர்\": \"இமான்\"\r\n          }\r\n        },\r\n        {\r\n          \"range\": {\r\n            \"வருடம்\" : {\r\n                \"gte\" : \"2019\"\r\n            }\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twoseparate fields",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"query\": {\r\n   \"bool\": {\r\n         \"must\": [\r\n             { \"match\": { \"பாடலாசிரியர்\": \"ரத்ன குமார்\" }},\r\n             { \"match\": { \"வருடம்\": \"2017\" }}\r\n         ]\r\n       }\r\n     }\r\n   \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fileddata-true",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"properties\": {\r\n    \"நுகர்ச்சி\": {\r\n      \"type\":     \"text\",\r\n      \"fielddata\": true\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_mapping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_mapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "latest songs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_source\":{\r\n        \"includes\":[\"திரைப்படம்\",\"இசையமைப்பாளர்\"]\r\n    },\r\n    \"size\":10,\r\n    \"sort\" : [\r\n        { \"மதிப்பீடு\" : {\"order\" : \"desc\"}}\r\n    ],\r\n    \"query\": {\r\n        \"multi_match\": {\r\n            \"fields\":[\"வகை\"],\r\n            \"query\" : \"குத்துபாடல்\",\r\n            \"fuzziness\": \"AUTO\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index creation with analyzers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"settings\": {\r\n        \"analysis\" : {\r\n            \"analyzer\": {\r\n                \"my_analyzer\": {\r\n                    \"tokenizer\" : \"standard\",\r\n                    \"filter\": [\"custom_stopper\", \"custom_stems\", \"synonyms\"]\r\n                }\r\n            },\r\n            \"filter\":{\r\n                \"custom_stopper\":{\r\n                    \"type\":\"stop\",\r\n                    \"stopwords_path\": \"analysis/stopwords.txt\"\r\n                },\r\n                \"custom_stems\":{\r\n                    \"type\":\"stemmer_override\",\r\n                    \"rules_path\": \"analysis/stemming_tamil.txt\"\r\n                },\r\n                \"synonyms\" :{\r\n                    \"type\": \"synonym\",\r\n                    \"synonyms_path\": \"analysis/synonym.txt\",\r\n                    \"updateable\": true\r\n                }\r\n            }\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/lyrics/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"lyrics",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggregation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"aggs\": {\r\n    \"cities\": {\r\n      \"terms\": { \"field\": \"city\" }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/tamilsonglyrics/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"tamilsonglyrics",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
