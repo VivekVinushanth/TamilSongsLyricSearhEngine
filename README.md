@@ -7,6 +7,7 @@ Corpus obtained from my previous work :  https://github.com/VivekVinushanth/Tami
 
 
 Directory Structure
+---
 ```
  ├── analyzers : Custom filters (Stemmers/stoppingwords,synonyms)
  ├── corpus : Modified data from the pre-processed data from actual (corpus) 
